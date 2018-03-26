@@ -35,7 +35,7 @@ class Main {
 		        				type = " IDENTIFIER";
 		        				break;
 						case DecafLexer.NUMBER:
-							type = " NUMBER";
+							type = " INTLITERAL";
 							break;		        			
 						case DecafLexer.CHARLITERAL:
 		        				type = " CHARLITERAL";
@@ -43,6 +43,9 @@ class Main {
 						case DecafLexer.STRING:
 							type = " STRINGLITERAL";
 							break;
+						case DecafLexer.HEXADECIMAL:
+							type = " HEXADECIMAL";
+						break;
 		        			}
 		        			System.out.println (token.getLine() + type + " " + text);
 		        		}

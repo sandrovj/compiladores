@@ -27,7 +27,9 @@ NUMBER: ('0'..'9')+;
 
 STRING : '"' (ESC|ID|OP_ARIT|' '|','|'.'|';'|':'|'?'|'!'|'\\'|',' ~('"')|NUMBER)* '"';
 
-WS_ : (' ' | '\n' ) -> skip;
+HEXADECIMAL:'0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
+
+WS_ : (' ' | '\n' | '\t' ) -> skip;
 
 SL_COMMENT : '//' (~'\n')* '\n' -> skip;
 
