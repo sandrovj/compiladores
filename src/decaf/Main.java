@@ -45,6 +45,9 @@ class Main {
 							break;
 						case DecafLexer.HEXADECIMAL:
 							type = " HEXADECIMAL";
+							break;
+						case DecafLexer.BOOLEANLITERAL:
+							type = " BOOLEANLITERAL";
 						break;
 		        			}
 		        			System.out.println (token.getLine() + type + " " + text);

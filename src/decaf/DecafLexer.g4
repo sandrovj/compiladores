@@ -35,6 +35,42 @@ SL_COMMENT : '//' (~'\n')* '\n' -> skip;
 
 NEGATIVO: ('-');
 
+PV: ';';
+
+VIRGULA: ',';
+
+EXCLAMACAO: '!';
+
+IF: 'if';
+
+ELSE: 'else';
+
+CALLOUT: 'callout';
+
+CLASS: 'class';
+
+INT: 'int';
+
+RETURN: 'return';
+
+VOID: 'void';
+
+FOR: 'for';
+
+BOOLEAN : 'boolean';
+
+BOOLEANLITERAL: ('true'|'false');
+
+BREAK: 'break';
+
+CONTINUE: 'continue';
+
+LCOLCHETE: '[';
+RCOLCHETE: ']';
+
+LPARENTESE: '(';
+RPARENTESE: ')';
+
 ID :('a'..'z' | 'A'..'Z'|'_')('a'..'z' | 'A'..'Z'|'_'|'0'..'9')*;
 
 fragment
