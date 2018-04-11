@@ -19,9 +19,17 @@ RCURLY : '}';
 
 OP_ATRIB: '=';
 
+OP_ATR_DECR: '-=' ;
+
+OP_ATR_INCR: '+=' ;
+
 OP_ARIT: ('+'|'*'|'/'|'%');
 
-OP_COND: ('>'|'<'|'>='|'<='|'=='|'!='|'&&'|'||');
+OP_REL : ('>'|'<'|'>='|'<=');
+
+OP_EQ : ('=='|'!=') ;
+
+OP_COND: ('&&'|'||');
 
 CHARLITERAL : '\'' (ESC|'a'..'z'|'A'..'Z'|'0'..'9'|~'\''|'\\t'|'\\\\') '\''; 
 
@@ -50,6 +58,8 @@ ELSE: 'else';
 CALLOUT: 'callout';
 
 CLASS: 'class';
+
+PROGRAM: 'Program';
 
 INT: 'int';
 
