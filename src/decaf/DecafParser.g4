@@ -21,7 +21,7 @@ method_decl: ( type | VOID ) ID LPARENTESE ( type ID (VIRGULA type ID)* )* RPARE
 
 block: LCURLY var_decl* statement* RCURLY;
 
-var_decl: type ID (VIRGULA (type ID | ID))* PV;
+var_decl: type ID (VIRG (type ID | ID))* PV;
 
 type: INT | BOOLEAN;
 
