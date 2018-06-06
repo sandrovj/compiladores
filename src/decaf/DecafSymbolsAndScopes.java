@@ -47,20 +47,37 @@ public class DecafSymbolsAndScopes extends DecafParserBaseListener {
 
     @Override
     public void exitMethod_decl(DecafParser.Method_declContext ctx) {
-        //popScope();
+        popScope();
     }
 
     @Override
     public void enterBlock(DecafParser.BlockContext ctx) {
         LocalScope l = new LocalScope(currentScope);
         saveScope(ctx, currentScope);
-        // pushScope(l);
+         pushScope(l);
     }
 
     @Override
     public void exitBlock(DecafParser.BlockContext ctx) {
-        //popScope();
+        popScope();
     }
+ 
+@Override
+	public void enterVar_decl(DecafParser.Var_declContext ctx) { 
+	defineVar(ctx.type().get(0), ctx.ID().get(0).getSymbol());
+
+}
+
+@Override
+public void exitVar_decl(DecafParser.Var_declContext ctx) {
+
+
+ }
+
+@Override public void enterLocation(DecafParser.LocationContext ctx) {}
+
+@Override public void exitLocation(DecafParser.LocationContext ctx) { }
+
 
     @Override
     public void enterField_decl(DecafParser.Field_declContext ctx)  {
